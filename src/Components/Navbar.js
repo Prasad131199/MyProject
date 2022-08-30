@@ -7,7 +7,7 @@ function Navbar() {
             <div className="menuIcon">
                 <ul className="navbar-list">
                     <li>
-                        <NavLink to="/home">Home</NavLink>
+                        <NavLink to="/home">MyHome</NavLink>
                     </li>
                     <li>
                         <NavLink to="/about">About</NavLink>
