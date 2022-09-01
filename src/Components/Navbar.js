@@ -1,32 +1,69 @@
 import React from 'react'
 import { NavLink } from "react-router-dom";
+import styled from 'styled-components';
+import { GlobalStyleComponent } from 'styled-components';
 
-function Navbar() {
+const Navbar = () => {
+
+    const Nav = styled.nav`
+    .navbar-list{
+        alignment: left;
+        display: flex;
+        gap: 4rem;
+
+        li{
+            list-style: none;
+            .navbar-link {
+                list-style: none;
+            }
+
+            .navbar-link {
+                &:link,
+                &:visited {
+                display: inline-block;
+                text-decoration: none;
+                font-size: 1.4rem;
+                text-transform: uppercase;
+                color: ${({ theme }) => theme.colors.black};
+                transition: color 0.1s linear;
+          }
+             
+            &: hover,
+            &: active{
+                color: ${({ theme }) => theme.colors.helper};
+            }
+
+                
+            }
+`;
+
     return (
-        <nav>
+        <Nav>
             <div className="menuIcon">
                 <ul className="navbar-list">
                     <li>
-                        <NavLink to="/home">MyHome</NavLink>
+                        <NavLink className="navbar-link" to="/home">Home</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/about">About</NavLink>
+                        <NavLink className="navbar-link" to="/about">About</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/service">Service</NavLink>
+                        <NavLink className="navbar-link" to="/service">Service</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/contact">Contact</NavLink>
+                        <NavLink className="navbar-link" to="/contact">Contact</NavLink>
                     </li>
-                
-            </ul>
+
+                </ul>
 
 
 
-        </div>
+            </div>
 
-    </nav >
-  );
+        </Nav >
+
+    );
+
 };
 
 export default Navbar;
