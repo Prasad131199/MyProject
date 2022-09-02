@@ -7,7 +7,7 @@ const Navbar = () => {
 
     const Nav = styled.nav`
     .navbar-list{
-        alignment: left;
+        alignment: center;
         display: flex;
         gap: 4rem;
 
@@ -22,7 +22,7 @@ const Navbar = () => {
                 &:visited {
                 display: inline-block;
                 text-decoration: none;
-                font-size: 1.4rem;
+                font-size: 1.8rem;
                 text-transform: uppercase;
                 color: ${({ theme }) => theme.colors.black};
                 transition: color 0.1s linear;

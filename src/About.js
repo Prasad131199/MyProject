@@ -1,9 +1,13 @@
 import React from 'react'
+import HeroSection from './Components/HeroSection';
 
 function About() {
-  return (
-    <div>About</div>
-  )
-}
+  const data = {
+    name: "Responsive Web Design",
+    image: "./logo1.png",
+
+  };
+  return <HeroSection {...data} />;
+};
 
 export default About;

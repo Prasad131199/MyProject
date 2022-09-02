@@ -6,11 +6,9 @@ import Home from './Home';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import { ThemeProvider } from 'styled-components';
-
-
-
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import GlobalStyle from './Components/GlobalStyle';
+import HeroSection from './Components/HeroSection';
 
 function App() {
 
@@ -40,6 +38,7 @@ function App() {
       <GlobalStyle />
       <BrowserRouter>
         <Header />
+        
 
         <Routes>
 
