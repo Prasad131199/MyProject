@@ -72,5 +72,26 @@ li{
     grid-template-columns: 1fr 1.2fr .5fr .8fr
 }
 
+input,textarea{
+    max-width: 50rem;
+    color: ${({ theme }) => theme.colors.black};
+    padding: 1.6rem 2.4rem;
+    border: 1px solid ${({theme}) => theme.colors.border};
+    text-transform: uppercase;
+    box-shadow: ${({theme}) => theme.colors.shadowSupport};
+}
+input[type="submit"] {
+
+    max-width: 16rem;
+    margin-top: 2rem;
+    background-color: ${({theme}) => theme.colors.btn};
+    color: ${({theme})=> theme.colors.blue};
+    padding: 1.4rem 2.2rem;
+    border-style: solid;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    cursor:pointer;
+
+}
 `;
 export default GlobalStyle;
